@@ -1,0 +1,19 @@
+import java.util.Arrays;
+class Solution {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int d=nums1.length;
+        int c[]=new int [d];
+        int j=0;
+        for(int i=0;i<m;i++){
+            c[i]=nums1[i];
+            }
+        int k=0;
+        for(int i=m;i<d;i++){ 
+            c[i]=nums2[i-m];
+            }
+        for(int i=0;i<d;i++){
+            nums1[i]=c[i];
+        }
+        Arrays.sort(nums1);
+    }
+}
