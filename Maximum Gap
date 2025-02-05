@@ -1,0 +1,15 @@
+ import java.util.Arrays;
+class Solution {
+    public int maximumGap(int[] nums) {
+        Arrays.sort(nums);
+     int n=nums.length;
+     int d=0;
+        for(int i=0;i<n-1;i++){
+           int r=Math.abs(nums[i]-nums[i+1]);
+           if(r>d){
+            d=r;
+           }
+        }
+        return d;
+    }
+}
