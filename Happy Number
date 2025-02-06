@@ -1,0 +1,20 @@
+class Solution {
+    public boolean isHappy(int n) {
+        while(n>=10){
+            int d=n;
+            int c=0;
+            while(d>0){
+                int r=d%10;
+                c=c+(r*r);
+                d=d/10;
+            }
+            n=c;
+        }
+        if(n==1||n==7){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+}
