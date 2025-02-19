@@ -1,0 +1,26 @@
+class Solution {
+    public int differenceOfSum(int[] nums) {
+        int n=nums.length;
+        int c=0;
+        for(int i=0;i<n;i++){
+            c=c+nums[i];
+        }
+        int r;
+        int d=0;
+        for(int i=0;i<n;i++){
+            while(nums[i]>0){
+                r=nums[i]%10;
+                d=d+r;
+                nums[i]=nums[i]/10;
+            }
+        }
+        int e;
+        if(c>d){
+            e=c-d;
+        }
+        else{
+            e=d-c;
+        }
+        return e;
+    }
+}
