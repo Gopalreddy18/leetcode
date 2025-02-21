@@ -1,0 +1,30 @@
+class Solution {
+    public boolean checkXMatrix(int[][] grid) {
+        int n=grid.length;
+        int c=0;
+        int d=0;
+        for(int i=0;i<n;i++){
+             if(grid[i][i]!=0&&grid[i][n-i-1]!=0){
+                    c=c+1;
+                    }
+                   for(int j=0;j<n;j++){
+                            if(grid[i][j]==0){
+                                d=d+1;
+                            }
+                    }
+                }
+                int e;
+                if(n%2==0){
+                    e=((n-2)*(n-1))+(n-2);
+                }
+                else{
+                    e=((n-2)*(n-1))+(n-1);
+                }
+                if(c==n&&d==e){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+    }
+}
