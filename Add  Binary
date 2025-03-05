@@ -13,7 +13,7 @@ class Solution {
                 s=s+b.charAt(j--)-'0';
             }
             r.append(s%2);
-            c=s/2;
+            c=s/2; 
         }
         return r.reverse().toString();
     }
