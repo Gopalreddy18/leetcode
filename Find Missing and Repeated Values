@@ -1,0 +1,22 @@
+class Solution {
+    public int[] findMissingAndRepeatedValues(int[][] grid) {
+        int n=grid.length;
+        int m=(n*n);
+        int []f=new int[m+1];
+        int d=-1,mi=-1;
+        for(int[]i:grid){
+            for(int j:i){
+                f[j]++;
+            }
+        }
+        for(int k=1;k<=m;k++){
+            if(f[k]==2){
+                d=k;
+            }
+            if(f[k]==0){
+                mi=k;
+            }
+        }
+    return new int[]{d,mi};
+    }
+}
