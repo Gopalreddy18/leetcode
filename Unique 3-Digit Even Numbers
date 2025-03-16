@@ -1,0 +1,23 @@
+class Solution {
+    public int totalNumbers(int[] a) {
+        Set<Integer>s=new HashSet<>();
+        int n=a.length;
+        for(int i=0;i<n;i++){
+            if(a[i]==0){
+                continue;
+            }
+            for(int j=0;j<n;j++){
+                if(j==i){
+                    continue;
+                }
+                for(int k=0;k<n;k++){
+                    if(k==i||k==j)continue;
+                        if(a[k]%2==1) continue;
+                int x=a[i]*100+a[j]*10+a[k];
+                s.add(x);
+                }
+            }
+        }
+        return s.size();
+    }
+}
