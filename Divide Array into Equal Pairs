@@ -1,0 +1,24 @@
+class Solution {
+    public boolean divideArray(int[] nums) {
+        int n=nums.length;
+        int d=n/2;
+        int c[]=new int[501];
+        for(int i=0;i<501;i++){
+            int l=0;
+            for(int j=0;j<n;j++){
+                if(i+1==nums[j]){
+                    l++;
+                }
+            }
+            c[i]=l;
+        }
+        int f=0;
+        for(int i=0;i<501;i++){
+            f=f+c[i]/2;
+        }
+        if(f==d){
+            return true;
+        }
+        return false;
+    }
+}
