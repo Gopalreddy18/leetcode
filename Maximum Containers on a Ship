@@ -1,0 +1,16 @@
+class Solution {
+    public int maxContainers(int n, int w, int maxWeight) {
+        int t=n*n;
+         int k=1;
+        int c=0;
+        int d=w;
+        while(k<=t){
+            if(d<=maxWeight){
+                c++;
+            }
+            d=d+w;
+            k++;
+        }
+        return c;
+    }
+}
