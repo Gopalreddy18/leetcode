@@ -1,0 +1,33 @@
+class Solution {
+    public int longestPalindrome(String s, String t) {
+        int m= 0;
+        for (int i = 0; i <= s.length(); i++) {
+            for (int j = i; j <= s.length(); j++) {
+                String subS = s.substring(i, j);
+                for (int k = 0; k <= t.length(); k++) {
+                    for (int l = k; l <= t.length(); l++) {
+                        String subT = t.substring(k, l);
+                        String concat = subS + subT;
+                        if (isP(concat)) {
+                            m= Math.max(m, concat.length());
+                        }
+                    }
+                }
+            }
+        }
+
+        return m;
+    }
+    private static boolean isP(String str) {
+        int left = 0, right = str.length() - 1;
+
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+    return true;
+    }
+}
