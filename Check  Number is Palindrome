@@ -16,6 +16,6 @@ bool isPalindrome(long int n) {
     else{
          return false;
     }
-    }
+}
 return 0;
 }
