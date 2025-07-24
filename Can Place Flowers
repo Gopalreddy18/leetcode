@@ -8,7 +8,7 @@ class Solution {
             e++;
          }
          if(e>=n){
-            return true;
+            returrn true;
          }
         }
         else{
